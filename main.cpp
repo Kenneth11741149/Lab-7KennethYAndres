@@ -36,9 +36,9 @@ int main(){
 		double numero;
 		double numerador;
 		double denominador;
-		int constante;
-		int indice;
-		int radicando;
+		double constante;
+		double indice;
+		double radicando;
 
 		switch(option){
 			case 1:{
