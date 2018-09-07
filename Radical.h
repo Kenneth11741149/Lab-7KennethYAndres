@@ -9,5 +9,8 @@ class Radical: public Real{
         int radicando;
     public:
         Radical();
+        Radical(int,int,int);
+
+        
 };
 #endif

@@ -27,6 +27,10 @@ bool Real::operator==(Real* pr){
     return (this->getValor() == pr->getValor());
 }
 
+string Real::toString(){
+    return to_string(valor);
+}
+
 Real::~Real(){
 
 }
