@@ -18,12 +18,13 @@ using std::vector;
 using std::stringstream;
 void imprimirBanco();
 
-//Vamos por el stringstream stream6;
+//Vamos por el stringstream stream8;
 vector<Real> banco;
 int main(){
 	cout << "Bienvenido al laboratorio del Grupo#1 Compuesto por ANDRES MONCADA Y KENNETH NUÑEZ	" << endl;
 	char resp = 's';
 	while(resp == 'S' || resp == 's'){
+		cout << endl;
 		cout << "1. Agregar numero al banco." << endl;
 		cout << "2. Hacer Operaciones." << endl;
 		int option = 0;
@@ -35,7 +36,10 @@ int main(){
 		double numero;
 		double numerador;
 		double denominador;
-		double constante;
+		int constante;
+		int indice;
+		int radicando;
+
 		switch(option){
 			case 1:{
 
@@ -91,7 +95,7 @@ int main(){
 							banco.push_back(newRacional);
 						} else {
 							cout << "denominador es 0 y eso no se puede." << endl;
-						}
+						} // FIn del if de validacion de que el denominador no pueda ser 0;
 						
 
 
@@ -101,13 +105,38 @@ int main(){
 						cout << "Ingrese la constante: " << endl;
 						constante = 0;
 						input = "";
+						cin >> input;
 						stringstream stream6;
 						stream6 << input;
 						stream6 >> constante;
 						cout << "La constante es: " << constante << endl;
 
 						cout << "Ingrese el indice:" << endl;
+						indice = 0;
+						input == "";
+						stringstream stream7;
+						cin >> input;
+						stream7 << input;
+						stream7 >> indice;
+						
+						cout << "El indice es: " << indice << endl;
 
+						cout << "Ingrese el radicando: " << endl;
+						radicando = 0;
+						input = "";
+
+						stringstream stream8;
+						cin >> input;
+						stream8 << input;
+						stream8 >> radicando;
+						cout << "El radicando es: " << radicando << endl;
+
+						if(indice == 0){
+							cout << "El indice no puede ser 0" << endl;
+						} else {
+							Radical newRadical = Radical(constante,indice,radicando);
+							banco.push_back(newRadical);
+						}
 
 
 
@@ -182,8 +211,8 @@ int main(){
 } //fin dle main.
 
 void imprimirBanco(){
-    cout << "Índice " << "Número";
+    cout << "Índice " << "Número" << endl;
     for (int i = 0; i < banco.size(); i++){
-        cout << i << ".     " << banco[i].toString();
+        cout << i << ".     " << banco[i].toString() << endl;
     }
 }
