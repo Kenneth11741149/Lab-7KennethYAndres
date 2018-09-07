@@ -1,5 +1,6 @@
 #include "Radical.h"
-
+#include<iostream>
+using namespace std;
 Radical::Radical():Real(){
     valor = 0;
     coeficiente = 0;
@@ -7,11 +8,13 @@ Radical::Radical():Real(){
     indice = 0;
 }
 
-Radical::Radical(int pcoeficiente,int pindice,int pradicando):Real(){
+Radical::Radical(double pcoeficiente,double pindice,double pradicando):Real(){
     coeficiente = pcoeficiente;
     indice = pindice;
     radicando = pradicando;
+    cout << pow(radicando,1/indice)<< endl;
     valor = coeficiente * pow(radicando,1/indice);
+    cout << valor;
 }
 
 string Radical::toString(){

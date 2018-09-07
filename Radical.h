@@ -6,12 +6,12 @@
 using namespace std;
 class Radical: public Real{
     private:
-        int coeficiente;
-        int indice;
-        int radicando;
+        double coeficiente;
+        double indice;
+        double radicando;
     public:
         Radical();
-        Radical(int,int,int);
+        Radical(double,double,double);
 
         string toString();
 };
