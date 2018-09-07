@@ -36,4 +36,7 @@ string Racional::toString(){
 	retVal = numerador2 + "/" + denominador2; 
 	return retVal;
 }
+Racional::~Racional(){
+	
+}
 

@@ -14,11 +14,11 @@ class Real{
         Real(double);
 
         double getValor();
-        double operator+(Real*);
-        double operator-(Real*);
-        double operator*(Real*);
-        double operator/(Real*);
-        bool operator==(Real*);
+        double operator+(Real);
+        double operator-(Real);
+        double operator*(Real);
+        double operator/(Real);
+        bool operator==(Real);
         virtual string toString(); 
 
         ~Real();

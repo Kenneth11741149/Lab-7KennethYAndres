@@ -19,7 +19,7 @@ using std::stringstream;
 void imprimirBanco();
 
 //Vamos por el stringstream stream6;
-vector<Real*> banco;
+vector<Real> banco;
 int main(){
 	cout << "Bienvenido al laboratorio del Grupo#1 Compuesto por ANDRES MONCADA Y KENNETH NUÑEZ	" << endl;
 	char resp = 's';
@@ -61,7 +61,7 @@ int main(){
 						stream3 << input;
 						stream3 >> numero;
 						cout << "El numero real es: " << numero << endl;
-						Real* newReal = new Real(numero);
+						Real newReal(numero);
 						banco.push_back(newReal);
 						} // Fin de la llave del switch case1  option2.
 						break;
@@ -87,7 +87,7 @@ int main(){
 
 
 						if(denominador != 0){
-							Racional* newRacional = new Racional(numerador,denominador);
+							Racional newRacional(numerador,denominador);
 							banco.push_back(newRacional);
 						} else {
 							cout << "denominador es 0 y eso no se puede." << endl;
@@ -130,8 +130,8 @@ int main(){
                 cout << "1. Sumar" << endl << "2. Restar" << endl << "3. Multiplicar"
                 << endl << "4. Dividir" << endl << "Ingrese una opción: ";
                 cin >> sub;
-                Real* r1;
-                Real* r2;
+                Real r1;
+                Real r2;
                 imprimirBanco();
                 int index;
                 cout << "Ingrese el índice del primer número: ";
@@ -184,6 +184,6 @@ int main(){
 void imprimirBanco(){
     cout << "Índice " << "Número";
     for (int i = 0; i < banco.size(); i++){
-        cout << i << ".     " << banco[i]->toString();
+        cout << i << ".     " << banco[i].toString();
     }
 }
