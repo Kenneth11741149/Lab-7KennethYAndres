@@ -1,6 +1,6 @@
 11741149 Kenneth Nuñez 
 11441061 Andres Moncada
 
-GRUPO #1
+GRUPO #1 Laboratorio de Programacion 3.
 
 LINK: https://github.com/Kenneth11741149/Lab-7KennethYAndres.git
