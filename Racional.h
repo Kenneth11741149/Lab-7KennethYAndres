@@ -9,14 +9,18 @@ class Racional:public Real{
 	public:
 	Racional();
 	Racional(int,int);
+
 	int getNumerador(){
 		return numerador;
 	}
+
 	int getDenominador(){
 		return denominador;
 	}
+
 	void setNumerador(int);
 	void setDenominador(int);
+	string toString();
 	~Racional();
 
 
