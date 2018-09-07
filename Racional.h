@@ -3,23 +3,23 @@
 #include "Real.h"
 class Racional:public Real{
 	private:
-		int numerador;
-		int denominador;
+		double numerador;
+		double denominador;
 
 	public:
 	Racional();
-	Racional(int,int);
+	Racional(double,double);
 
-	int getNumerador(){
+	double getNumerador(){
 		return numerador;
 	}
 
-	int getDenominador(){
+	double getDenominador(){
 		return denominador;
 	}
 
-	void setNumerador(int);
-	void setDenominador(int);
+	void setNumerador(double);
+	void setDenominador(double);
 	string toString();
 	~Racional();
 

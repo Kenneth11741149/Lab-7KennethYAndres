@@ -5,18 +5,18 @@ Racional::Racional():Real(){
 
 }
 
-Racional::Racional(int pnumerador, int pdenominador):Real(){
+Racional::Racional(double pnumerador, double pdenominador):Real(){
 	numerador = pnumerador;
 	denominador = pdenominador;
 	valor = numerador/denominador;
 }
 
-void Racional::setNumerador(int pnumerador){
+void Racional::setNumerador(double pnumerador){
 	numerador = pnumerador;
 	valor = numerador/denominador;
 }
 
-void Racional::setDenominador(int pdenominador){
+void Racional::setDenominador(double pdenominador){
 	denominador = pdenominador;
 	valor = numerador/denominador;
 }
@@ -26,10 +26,14 @@ string Racional::toString(){
 	stringstream stream2;
 
 	stream << numerador;
-	stream << denominador;
+	stream2 << denominador;
 
+	string numerador2 = "";
+	string denominador2 = "";
+	stream >> numerador2;
+	stream2 >>denominador2;
 	string retVal;
-	retVal = numerador + "/" + denominador; 
+	retVal = numerador2 + "/" + denominador2; 
 	return retVal;
 }
 
