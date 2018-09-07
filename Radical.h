@@ -2,6 +2,8 @@
 #define RADICAL_H
 
 #include "Real.h"
+#include<math.h>
+using namespace std;
 class Radical: public Real{
     private:
         int coeficiente;
@@ -11,6 +13,8 @@ class Radical: public Real{
         Radical();
         Radical(int,int,int);
 
-        
+        string toString();
+
+
 };
 #endif
