@@ -3,6 +3,10 @@
 Real::Real(){
 }
 
+Real::Real(double pvalor){
+    valor = pvalor;
+}
+
 double Real::getValor(){
     return valor;
 }

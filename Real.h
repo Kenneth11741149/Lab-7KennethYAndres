@@ -9,6 +9,7 @@ class Real{
     public:
 
         Real();
+        Real(double);
 
         double getValor();
         double operator+(Real*);
