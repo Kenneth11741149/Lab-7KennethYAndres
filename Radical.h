@@ -14,7 +14,5 @@ class Radical: public Real{
         Radical(int,int,int);
 
         string toString();
-
-
 };
 #endif

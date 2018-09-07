@@ -23,7 +23,7 @@ double Real::operator*(Real* pr){
     return this->getValor() * pr->getValor();
 }
 
-double Real::operator+(Real* pr){
+double Real::operator/(Real* pr){
     return this->getValor() / pr->getValor();
 }
 
