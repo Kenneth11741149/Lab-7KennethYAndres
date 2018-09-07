@@ -8,6 +8,7 @@ class Real{
 
         Real();
 
+        double getvalor();
         virtual double sumar();
         virtual double restar();
         virtual double multiplicar();
