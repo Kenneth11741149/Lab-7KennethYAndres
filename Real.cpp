@@ -1,5 +1,12 @@
 #include "Real.h"
 
 Real::Real(){
-    valor = 0;
+}
+
+double Real::getvalor(){
+    return valor;
+}
+
+Real::~Real(){
+    
 }
