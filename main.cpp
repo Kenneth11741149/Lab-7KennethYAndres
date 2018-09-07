@@ -16,11 +16,18 @@ using std::vector;
 
 #include <sstream>
 using std::stringstream;
+
+
+#include <fstream>
+using namespace std;
+
 void imprimirBanco();
 
 //Vamos por el stringstream stream8;
 vector<Real> banco;
 int main(){
+	ofstream myfile;
+  	myfile.open ("Operaciones.txt");
 	cout << "Bienvenido al laboratorio del Grupo#1 Compuesto por ANDRES MONCADA Y KENNETH NUÑEZ	" << endl;
 	char resp = 's';
 	while(resp == 'S' || resp == 's'){
@@ -181,12 +188,18 @@ int main(){
 	                switch(sub){
 	                    case 1:
 	                        resultado = r1 + d;
+							myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "+" << to_string(d) << "=" << to_string(resultado) << "\n";
 	                        break;
 	                    case 2:
 	                        resultado = r1 - d;
+							myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "-" << to_string(d) << "=" << to_string(resultado) << "\n";
 	                        break;
 	                    case 3:
 	                        resultado = r1 * d;
+							myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "*" << to_string(d) << "=" << to_string(resultado) << "\n";
 	                        break;
 	                    case 4:
 	                    	if(d == 0){
@@ -194,6 +207,8 @@ int main(){
 	                    		resultado = 0;
 	                    	} else {
 	                    		resultado = r1 / d;
+								myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "/" << to_string(d) << "=" << to_string(resultado) << "\n";
 	                    	}
 
 	                        break;
@@ -210,15 +225,23 @@ int main(){
 	                switch(sub){
 	                    case 1:
 	                        resultado = r1 + r2;
+							myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "+" << to_string(r2.getValor()) << "=" << to_string(resultado) << "\n";
 	                        break;
 	                    case 2:
 	                        resultado = r1 - r2;
+							myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "-" << to_string(r2.getValor()) << "=" << to_string(resultado) << "\n";
 	                        break;
 	                    case 3:
 	                        resultado = r1 * r2;
+							myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "*" << to_string(r2.getValor()) << "=" << to_string(resultado) << "\n";
 	                        break;
 	                    case 4:
 	                        resultado = r1 / r2;
+							myfile << "#deoperacion. " << to_string(r1.getValor()) 
+							<< "/" << to_string(r2.getValor()) << "=" << to_string(resultado) << "\n";
 	                }
                 }
                 
@@ -245,6 +268,7 @@ int main(){
 
 
 
+	myfile.close();
 
 	return 0;
 } //fin dle main.
