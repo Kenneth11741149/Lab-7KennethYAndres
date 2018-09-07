@@ -161,28 +161,67 @@ int main(){
                 cin >> sub;
                 Real r1;
                 Real r2;
-                imprimirBanco();
-                int index;
-                cout << "Ingrese el índice del primer número: ";
-                cin >> index;
-                r1 = banco[index];
-                cout << "Ingrese el índice del segundo número: ";
-                cin >> index;
-                r2 = banco[index];
+                cout << "Desea ingresar su propio numero o usar uno del banco ? [1/0]" << endl;
+                double d;
+                input = "";
+                cin >> input;
+                stringstream stream9;
+                stream9 << input;
+                int validador = 0;
+                stream9 >> validador;
                 double resultado;
-                switch(sub){
-                    case 1:
-                        resultado = r1 + r2;
-                        break;
-                    case 2:
-                        resultado = r1 - r2;
-                        break;
-                    case 3:
-                        resultado = r1 * r2;
-                        break;
-                    case 4:
-                        resultado = r1 / r2;
+                if(validador == 1){
+                	cout << "Ingrese el numero: " << endl;
+                	cin >> d; 
+                	imprimirBanco();
+	                int index;
+	                cout << "Ingrese el índice del primer número: ";
+	                cin >> index;
+	                r1 = banco[index];
+	                switch(sub){
+	                    case 1:
+	                        resultado = r1 + d;
+	                        break;
+	                    case 2:
+	                        resultado = r1 - d;
+	                        break;
+	                    case 3:
+	                        resultado = r1 * d;
+	                        break;
+	                    case 4:
+	                    	if(d == 0){
+	                    		cout << "No se puede dividir por 0" << endl;
+	                    		resultado = 0;
+	                    	} else {
+	                    		resultado = r1 / d;
+	                    	}
+
+	                        break;
+	                }
+                } else {
+                	imprimirBanco();
+	                int index;
+	                cout << "Ingrese el índice del primer número: ";
+	                cin >> index;
+	                r1 = banco[index];
+	                cout << "Ingrese el índice del segundo número: ";
+	                cin >> index;
+	                r2 = banco[index];
+	                switch(sub){
+	                    case 1:
+	                        resultado = r1 + r2;
+	                        break;
+	                    case 2:
+	                        resultado = r1 - r2;
+	                        break;
+	                    case 3:
+	                        resultado = r1 * r2;
+	                        break;
+	                    case 4:
+	                        resultado = r1 / r2;
+	                }
                 }
+                
                 cout << "El resultado es: " << resultado << endl;
             }
 				break;// Fin del case2  switch (option)
