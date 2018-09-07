@@ -1,8 +1,10 @@
 #ifndef REAL_H
 #define REAL_H
-
+#include <sstream>
 #include<string>
 using namespace std;
+
+
 class Real{
     protected:
         double valor;
