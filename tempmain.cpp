@@ -16,9 +16,9 @@ using std::vector;
 
 #include <sstream>
 using std::stringstream;
+
 void imprimirBanco();
 
-//Vamos por el stringstream stream6;
 vector<Real*> banco;
 int main(){
 	cout << "Bienvenido al laboratorio del Grupo#1 Compuesto por ANDRES MONCADA Y KENNETH NUÑEZ	" << endl;
@@ -33,9 +33,6 @@ int main(){
 		stream << input;
 		stream >> option;
 		double numero;
-		double numerador;
-		double denominador;
-		double constante;
 		switch(option){
 			case 1:{
 
@@ -60,60 +57,12 @@ int main(){
 						stringstream stream3;
 						stream3 << input;
 						stream3 >> numero;
-						cout << "El numero real es: " << numero << endl;
-						Real* newReal = new Real(numero);
-						banco.push_back(newReal);
 						} // Fin de la llave del switch case1  option2.
 						break;
-					case 2:{
-						cout << "Ingrese el numerador. " << endl;
-						numerador = 0;
-						input = "";
-						cin >> input;
-						stringstream stream4;
-						stream4 << input;
-						stream4 >> numerador;
-						//cout << "Numerador: " << numerador << endl;
-
-
-						cout << "Ingrese el denominador. " << endl;
-						denominador = 0;
-						input = "";
-						cin >> input;
-						stringstream stream5;
-						stream5 << input;
-						stream5 >> denominador;
-						//cout << "El demominador es: " << denominador << endl;
-
-
-						if(denominador != 0){
-							Racional* newRacional = new Racional(numerador,denominador);
-							banco.push_back(newRacional);
-						} else {
-							cout << "denominador es 0 y eso no se puede." << endl;
-						}
-						
-
-
-						} //fin del case 2 (option 2)
+					case 2:
 						break;
-					case 3:{
-						cout << "Ingrese la constante: " << endl;
-						constante = 0;
-						input = "";
-						stringstream stream6;
-						stream6 << input;
-						stream6 >> constante;
-						cout << "La constante es: " << constante << endl;
-
-						cout << "Ingrese el indice:" << endl;
-
-
-
-
-					} // FIn del case 3 (option2)
+					case 3:
 						break;
-
 					default:
 						cout << "Opcion totalmente Invalida" << endl;
 						break;
