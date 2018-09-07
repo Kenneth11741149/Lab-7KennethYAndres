@@ -15,6 +15,6 @@ Radical::Radical(int pcoeficiente,int pindice,int pradicando):Real(){
 }
 
 string Radical::toString(){
-    return coeficiente + "(" + radicando + ")^1/"+ indice;
+    return to_string(coeficiente) + "(" + to_string(radicando) + ")^1/" + to_string(indice);
 }
 
