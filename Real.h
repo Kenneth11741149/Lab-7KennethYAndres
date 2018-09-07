@@ -8,11 +8,12 @@ class Real{
 
         Real();
 
-        double getvalor();
-        virtual double sumar();
-        virtual double restar();
-        virtual double multiplicar();
-        virtual double dividir();
+        double getValor();
+        double operator+(Real*);
+        double operator-(Real*);
+        double operator*(Real*);
+        double operator/(Real*);
+        bool operator==(Real*);
 
         ~Real();
 };
